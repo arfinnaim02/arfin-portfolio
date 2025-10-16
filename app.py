@@ -196,7 +196,7 @@ data_science_projects = [
    {
         "title": "Data Analysis Portal",
         "desc": "Streamlit app for interactive data analysis and visualization.",
-        "image": "assets/profile.jpg",  # you can change the image path
+        "image": "assets/project1.jpg",  # you can change the image path
         "demo": "https://dataanalysis01.streamlit.app/",
         "github": "https://github.com/arfinnaim02/Data-Analysis-Portal"
     },
