@@ -193,7 +193,13 @@ coding_projects = [
 ]
 
 data_science_projects = [
-    {"title": "Sales Dashboard", "desc": "Interactive dashboard analyzing sales trends & KPIs.", "image": "assets/project3.png", "demo": "#", "github": "https://github.com/yourusername/sales-dashboard"},
+   {
+        "title": "Data Analysis Portal",
+        "desc": "Streamlit app for interactive data analysis and visualization.",
+        "image": "assets/profile.jpg",  # you can change the image path
+        "demo": "https://dataanalysis01.streamlit.app/",
+        "github": "https://github.com/arfinnaim02/Data-Analysis-Portal"
+    },
     {"title": "Customer Segmentation", "desc": "Clustering customers for marketing insights.", "image": "assets/project4.png", "demo": "#", "github": "https://github.com/yourusername/customer-segmentation"}
 ]
 
@@ -212,10 +218,10 @@ st.header("Contact Me")
 st.markdown("Reach me via Email, LinkedIn, GitHub or Kaggle!")
 col1, col2 = st.columns(2)
 with col1:
-    st.write("📧 Email: your_email@example.com")
-    st.write("💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)")
+    st.write("📧 Email: arfinnaim04@gmail.com")
+    st.write("💼 LinkedIn: [linkedin.com/arfinnaim04/](https://www.linkedin.com/in/arfinnaim04/)")
 with col2:
-    st.write("🐙 GitHub: [github.com/yourusername](https://github.com/yourusername)")
-    st.write("📊 Kaggle: [kaggle.com/yourusername](https://kaggle.com/yourusername)")
+    st.write("🐙 GitHub: [github.com/arfinnaim02](https://github.com/arfinnaim02)")
+    st.write("📊 Kaggle: [kaggle.com/arfinnaim02](https://www.kaggle.com/arfinnaim02)")
 
 st.markdown("<h5 style='text-align:center;color:gray;'>© 2025 Arfin Naim</h5>", unsafe_allow_html=True)
