@@ -1,0 +1,90 @@
+/* ------------------- */
+/* FULL PAGE GRADIENT BACKGROUND */
+/* ------------------- */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #00c6ff, #0072ff, #00d2ff);
+    background-attachment: fixed;
+    color: #f0f0f0; /* Light text color for readability */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Main content container semi-transparent */
+[data-testid="stMainContent"] {
+    background-color: rgba(0,0,0,0.25);
+    padding: 2.5rem;
+    border-radius: 20px;
+}
+
+/* Hide default Streamlit elements */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Headers & text styling */
+h1 { font-size: 4rem; color: #ffffff; }
+h2 { font-size: 3rem; color: #ffffff; }
+h3 { font-size: 2.5rem; color: #ffffff; }
+h4 { font-size: 2rem; color: #ffffff; }
+h5 { font-size: 1.8rem; color: #ffffff; }
+h6 { font-size: 1.5rem; color: #ffffff; }
+p, li { font-size: 1.2rem; }
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, #00d2ff, #0072ff);
+    color: #ffffff;
+    padding: 70px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+}
+
+/* Project cards */
+.project-card {
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.35);
+    padding: 30px;
+    margin: 25px 0;
+    background-color: rgba(10,10,10,0.55);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 40px rgba(255,255,255,0.35);
+}
+
+/* Buttons */
+a.button {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    background: linear-gradient(90deg,#00d2ff,#0072ff);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+a.button:hover {
+    background: linear-gradient(90deg,#0072ff,#00d2ff);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 18px rgba(255,255,255,0.6);
+}
+
+/* Animated counters */
+.counter {
+    font-size: 55px; /* increased text size */
+    color: #ffd700; /* bright accent for counters */
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Links & highlights */
+a {
+    color: #ffd700;
+    text-decoration: none;
+}
+a:hover {
+    color: #ffffff;
+}
