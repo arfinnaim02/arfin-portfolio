@@ -1,3 +1,5 @@
-git add app.py
-git commit -m "Describe your changes"
+cd /d/pictures/imp_docs/portfolio
+
+git add .
+git commit -m "Update portfolio - added new project"
 git push

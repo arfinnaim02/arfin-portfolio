@@ -126,10 +126,11 @@ st.subheader("🛠 Technical Skills")
 
 skills = {
     "Python": 90,
-    "R": 80,
+    "Visualization": 95,
     "SQL": 85,
     "ML": 75,
-    "Visualization": 95,
+    "Excel": 90,
+    "Power BI": 70,
     "EDA": 85
 }
 
@@ -169,12 +170,73 @@ with col_passion:
 # -------------------
 st.markdown("---")
 st.subheader("📍 Personal Interests")
+st.write("")
 
+# CSS Styling for the Boxes
+st.markdown("""
+<style>
+.interest-box {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.interest-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+.interest-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #38bdf8;
+    margin-bottom: 6px;
+}
+.interest-desc {
+    font-size: 14px;
+    color: #e2e8f0;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# Four columns for interests
 col1, col2, col3, col4 = st.columns(4)
-col1.markdown("#### 🍫 Chocolate Crafting\nCreative projects")
-col2.markdown("#### 📊 Data Storytelling\nTransforming data into narratives")
-col3.markdown("#### 💡 Tech Learning\nNew programming techniques")
-col4.markdown("#### 🚀 Innovation\nBuilding impactful solutions")
+
+with col1:
+    st.markdown("""
+    <div class="interest-box">
+        <div class="interest-title">🔍 E-Commerce Trend & Growth Lab</div>
+        <div class="interest-desc">Discovering market insights through data, AI, and digital strategy.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div class="interest-box">
+        <div class="interest-title">📊 Data Storytelling Lab</div>
+        <div class="interest-desc">Turning complex datasets into engaging, actionable narratives.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col3:
+    st.markdown("""
+    <div class="interest-box">
+        <div class="interest-title">💡 Continuous Tech Learning</div>
+        <div class="interest-desc">Exploring modern frameworks, AI tools, and coding innovations.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col4:
+    st.markdown("""
+    <div class="interest-box">
+        <div class="interest-title">🚀 Innovation & Impact</div>
+        <div class="interest-desc">Designing smart, scalable, and meaningful data-driven solutions.</div>
+    </div>
+    """, unsafe_allow_html=True)
+
 
 # -------------------
 # ANIMATED COUNTERS
@@ -184,13 +246,13 @@ st.subheader("📈 Quick Stats")
 
 col1, col2, col3, col4 = st.columns(4)
 with col1:
-    animated_counter("Projects Completed", 8)
+    animated_counter("Projects Completed", 17)
 with col2:
-    animated_counter("Datasets Analyzed", 25)
+    animated_counter("Datasets Analyzed", 9)
 with col3:
-    animated_counter("Happy Clients", 10)
+    animated_counter("Happy Clients", 7)
 with col4:
-    animated_counter("Skills Mastered", 6)
+    animated_counter("Skills Mastered", 9)
 
 st.markdown("---")
 
@@ -200,8 +262,8 @@ st.markdown("---")
 st.header("📊 Skills & Tools")
 
 skills_df = pd.DataFrame({
-    'Skill': ['Python', 'R', 'SQL', 'ML', 'Visualization', 'EDA'],
-    'Proficiency': [90, 80, 85, 75, 95, 85]
+    'Skill': ['Python', 'Visualization', 'SQL', 'ML', 'Excel', 'Power BI', 'EDA'],
+    'Proficiency': [90, 95, 85, 75, 90, 70, 85]
 })
 
 fig = px.line_polar(
@@ -244,28 +306,88 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown("---")
 
 # -------------------
-# CORE COMPETENCIES & TOOLS
+# CORE COMPETENCIES & TOOLS (Smart UI)
 # -------------------
+st.markdown("## 💼 Core Competencies & Tools")
+st.write("")  # small space
+
+# Custom CSS styling
+st.markdown("""
+<style>
+.skill-box {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+.skill-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+.skill-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+.skill-item {
+    display: inline-block;
+    background: #334155;
+    color: #e2e8f0;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin: 4px 4px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+.skill-item:hover {
+    background: #38bdf8;
+    color: black;
+}
+</style>
+""", unsafe_allow_html=True)
+
 col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
-    #### 🎯 Core Competencies
-    - ✓ Data Analysis & Visualization
-    - ✓ Machine Learning Models
-    - ✓ SQL Database Management
-    - ✓ Automation & Scripting
-    - ✓ Dashboard Development
-    - ✓ Statistical Analysis
-    """)
+    <div class="skill-box">
+        <div class="skill-title">🎯 Core Competencies</div>
+        <div class="skill-item">Data Analysis & Visualization</div>
+        <div class="skill-item">Machine Learning & Predictive Modeling</div>
+        <div class="skill-item">Statistical Analysis & Inference</div>
+        <div class="skill-item">SQL Database Management</div>
+        <div class="skill-item">Automation & Scripting</div>
+        <div class="skill-item">Dashboard Development</div>
+        <div class="skill-item">Collaboration with AI Tools (ChatGPT, LLMs)</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
-    #### 🛠️ Tools & Technologies
-    `Python` `R` `SQL` `Pandas` `NumPy` `Scikit-learn` `Plotly` `Streamlit` `Excel` `Git` `Tableau` `Power BI`
-    """)
+    <div class="skill-box">
+        <div class="skill-title">🛠️ Tools & Technologies</div>
+        <div class="skill-item">Python</div>
+        <div class="skill-item">R</div>
+        <div class="skill-item">SQL</div>
+        <div class="skill-item">Power BI</div>
+        <div class="skill-item">Excel</div>
+        <div class="skill-item">Pandas</div>
+        <div class="skill-item">NumPy</div>
+        <div class="skill-item">Scikit-learn</div>
+        <div class="skill-item">Streamlit</div>
+        <div class="skill-item">Plotly</div>
+        <div class="skill-item">TensorFlow</div>
+        <div class="skill-item">Git</div>
+        <div class="skill-item">ChatGPT API</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
+
 
 # -------------------
 # PROJECT PORTFOLIO
@@ -291,11 +413,11 @@ coding_projects = [
 
 data_science_projects = [
     {
-        "title": "Data Analysis Portal",
-        "desc": "Interactive Streamlit app for real-time data analysis with advanced visualizations.",
+        "title": "Data Analysis Dashboard",
+        "desc": "An interactive Streamlit dashboard for real-time sales and delivery insights.",
         "image": "assets/project1.jpg",
-        "demo": "https://dataanalysis01.streamlit.app/",
-        "github": "https://github.com/arfinnaim02/Data-Analysis-Portal"
+        "demo": "https://example.com",
+        "github": "https://github.com/yourusername/data-analysis-dashboard"
     },
     {
         "title": "Customer Segmentation",
@@ -339,31 +461,97 @@ with col2:
         """, unsafe_allow_html=True)
 
 st.markdown("---")
-
 # -------------------
 # CONTACT SECTION
 # -------------------
+st.markdown("---")
 st.header("📧 Contact Me")
-st.markdown("Reach me via Email, LinkedIn, GitHub or Kaggle!")
+st.markdown("Let’s connect and collaborate! Reach out via any of the platforms below 👇")
+st.write("")
 
+# Custom CSS
+st.markdown("""
+<style>
+.contact-card {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+}
+.contact-icon {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+.contact-text {
+    font-size: 15px;
+    color: #e2e8f0;
+}
+a.contact-link {
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: 600;
+}
+a.contact-link:hover {
+    color: #0ea5e9;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# Contact cards
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.link_button("📧 Email", "mailto:arfinnaim04@gmail.com")
+    st.markdown("""
+    <div class="contact-card">
+        <div class="contact-icon">📧</div>
+        <div class="contact-text">Email Me</div>
+        <a class="contact-link" href="mailto:arfinnaim04@gmail.com">arfinnaim04@gmail.com</a>
+    </div>
+    """, unsafe_allow_html=True)
+
 with col2:
-    st.link_button("💼 LinkedIn", "https://www.linkedin.com/in/arfinnaim04/")
+    st.markdown("""
+    <div class="contact-card">
+        <div class="contact-icon">💼</div>
+        <div class="contact-text">LinkedIn</div>
+        <a class="contact-link" href="https://www.linkedin.com/in/arfinnaim04/" target="_blank">linkedin.com/in/arfinnaim04</a>
+    </div>
+    """, unsafe_allow_html=True)
+
 with col3:
-    st.link_button("🐙 GitHub", "https://github.com/arfinnaim02")
+    st.markdown("""
+    <div class="contact-card">
+        <div class="contact-icon">🐙</div>
+        <div class="contact-text">GitHub</div>
+        <a class="contact-link" href="https://github.com/arfinnaim02" target="_blank">github.com/arfinnaim02</a>
+    </div>
+    """, unsafe_allow_html=True)
+
 with col4:
-    st.link_button("📊 Kaggle", "https://www.kaggle.com/arfinnaim02")
+    st.markdown("""
+    <div class="contact-card">
+        <div class="contact-icon">📊</div>
+        <div class="contact-text">Kaggle</div>
+        <a class="contact-link" href="https://www.kaggle.com/arfinnaim02" target="_blank">kaggle.com/arfinnaim02</a>
+    </div>
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
+
 
 # -------------------
 # FOOTER
 # -------------------
 st.markdown("""
 <h5 style='text-align:center; color:#9ca3af; margin-top: 50px;'>
-© 2025 Arfin Naim. All rights reserved. | Built with ❤️ using Streamlit
-</h5>
+© 2025 Arfin Naim. All rights reserved. 
 """, unsafe_allow_html=True)
