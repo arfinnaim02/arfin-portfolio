@@ -127,8 +127,8 @@ st.subheader("🛠 Technical Skills")
 skills = {
     "Python": 90,
     "Visualization": 95,
-    "SQL": 85,
-    "ML": 75,
+    "SQL": 75,
+    "ML": 85,
     "Excel": 90,
     "Power BI": 70,
     "EDA": 85
@@ -263,7 +263,7 @@ st.header("🚀 Technical Skills Overview")
 
 skills_df = pd.DataFrame({
     'Skill': ['Python', 'Data Visualization', 'SQL', 'Machine Learning', 'Excel', 'Power BI', 'EDA'],
-    'Proficiency': [92, 96, 85, 78, 90, 72, 88]
+    'Proficiency': [92, 96, 75, 85, 90, 72, 88]
 })
 
 # Create radar chart with smoother look
