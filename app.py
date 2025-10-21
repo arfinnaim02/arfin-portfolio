@@ -474,6 +474,73 @@ with col2:
         """, unsafe_allow_html=True)
 
 st.markdown("---")
+
+
+# -------------------
+# ACADEMIC RESEARCH SECTION
+# -------------------
+st.header("📚 Academic Research & Publication")
+
+st.markdown("""
+<style>
+.research-card {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.research-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+}
+.research-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+.research-authors {
+    font-size: 15px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+.research-desc {
+    font-size: 15px;
+    color: #e2e8f0;
+    margin-bottom: 18px;
+}
+.research-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.research-link:hover {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+}
+</style>
+
+<div class='research-card'>
+    <div class='research-title'>🍅 Tomato Shelf Life Prediction using IoT and Machine Learning</div>
+    <div class='research-authors'>
+        <strong>Authors:</strong> Arfin Naim, Raisul Islam Asad, Jiaul Houque, Dr. Saifuddin, Md. Nadib Hasan
+    </div>
+    <div class='research-desc'>
+        This paper proposes an intelligent system that leverages IoT sensors and machine learning algorithms to predict the shelf life of tomatoes — optimizing post-harvest management and reducing food waste.
+    </div>
+    <a class='research-link' href='https://ieeexplore.ieee.org/document/10939467' target='_blank'>🔗 View on IEEE Xplore</a>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("---")
+
 # -------------------
 # CONTACT SECTION
 # -------------------
