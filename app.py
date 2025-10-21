@@ -106,7 +106,7 @@ with col2:
         st.markdown("""
 **Data Analyst – Vibes** | Feb 2025 – Oct 2025  
 - Sales analytics & performance dashboards  
-- Auto Invoice generator using numpy,panda and flask
+- Auto Picking Sheet generator using numpy,panda and flask
 - Product performance evaluation  
 
 **Data & Sales Team Lead – Sunnah Dress** | June 2024 – Nov 2024  
