@@ -87,7 +87,7 @@ st.header("👤 About Me")
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.image("assets/profile.jpg", width=300, caption="Arfin Naim")
+    st.image("assets/profile.jpg", width=400, caption="Arfin Naim")
 
 with col2:
     col_edu, col_work = st.columns(2)
@@ -95,10 +95,10 @@ with col2:
     with col_edu:
         st.markdown("### 🎓 Education")
         st.markdown("""
-        - **Master of Science (MSc)** in Applied Statistics & Data Science, Jahangirnagar University — *Enrolled 2027*  
-        - **Bachelor of Science (BSc)** in Computer Communication Engineering, IIUC — *CGPA: 3.606 (2023)*  
-        - **HSC** in Science, Bangladesh Naubahini College — *GPA: 3.5/5 (2019)*  
-        - **SSC** in Science, Government Muslim High School — *GPA: 5/5 (2017)*
+        - **Master of Science (MSc)** in Applied Statistics & Data Science, Jahangirnagar University — *Enrolled 2026*  
+        - **Bachelor of Science (BSc)** in Computer Communication Engineering, IIUC — *(2023)*  
+        - **HSC** in Science, Bangladesh Naubahini College — *(2019)*  
+        - **SSC** in Science, Government Muslim High School — *(2017)*
         """)
 
     with col_work:
@@ -106,7 +106,7 @@ with col2:
         st.markdown("""
 **Data Analyst – Vibes** | Feb 2025 – Oct 2025  
 - Sales analytics & performance dashboards  
-- AI-based CCTV automation  
+- Auto Invoice generator using numpy,panda and flask
 - Product performance evaluation  
 
 **Data & Sales Team Lead – Sunnah Dress** | June 2024 – Nov 2024  
@@ -259,26 +259,29 @@ st.markdown("---")
 # -------------------
 # SKILLS RADAR CHART
 # -------------------
-st.header("📊 Skills & Tools")
+st.header("🚀 Technical Skills Overview")
 
 skills_df = pd.DataFrame({
-    'Skill': ['Python', 'Visualization', 'SQL', 'ML', 'Excel', 'Power BI', 'EDA'],
-    'Proficiency': [90, 95, 85, 75, 90, 70, 85]
+    'Skill': ['Python', 'Data Visualization', 'SQL', 'Machine Learning', 'Excel', 'Power BI', 'EDA'],
+    'Proficiency': [92, 96, 85, 78, 90, 72, 88]
 })
 
+# Create radar chart with smoother look
 fig = px.line_polar(
     skills_df,
     r='Proficiency',
     theta='Skill',
     line_close=True,
     markers=True,
-    title="Technical Proficiency Radar"
+    title="🔹 My Core Competency Map"
 )
 
+# Styling
 fig.update_traces(
     fill='toself',
-    line_color='#667eea',
-    fillcolor='rgba(102, 126, 234, 0.3)'
+    line_color='rgba(66, 133, 244, 0.9)',
+    fillcolor='rgba(66, 133, 244, 0.25)',
+    marker=dict(size=8, color='rgba(255,255,255,0.9)', line=dict(color='rgba(66,133,244,0.9)', width=2))
 )
 
 fig.update_layout(
@@ -289,21 +292,37 @@ fig.update_layout(
         radialaxis=dict(
             visible=True,
             range=[0, 100],
-            gridcolor='rgba(102, 126, 234, 0.2)',
-            tickfont=dict(color='#cbd5e1')
+            gridcolor='rgba(66,133,244,0.2)',
+            showline=False,
+            tickfont=dict(size=12, color='#d1d5db')
         ),
         angularaxis=dict(
-            gridcolor='rgba(102, 126, 234, 0.2)',
-            tickfont=dict(color='#cbd5e1')
+            gridcolor='rgba(66,133,244,0.2)',
+            tickfont=dict(size=13, color='#d1d5db'),
+            rotation=90
         )
     ),
-    font=dict(color='#cbd5e1'),
-    height=500
+    font=dict(color='#e2e8f0', size=13),
+    title=dict(
+        font=dict(size=20, color='#60a5fa'),
+        x=0.5,
+        xanchor='center'
+    ),
+    height=520,
+    margin=dict(l=50, r=50, t=100, b=50)
 )
 
+# Display in Streamlit
 st.plotly_chart(fig, use_container_width=True)
 
+st.markdown("""
+<div style='text-align:center; font-size:16px; color:#94a3b8;'>
+💡 Each spoke represents one of my core technical areas, highlighting a balanced mix of analytical, coding, and visualization skills.
+</div>
+""", unsafe_allow_html=True)
+
 st.markdown("---")
+
 
 # -------------------
 # CORE COMPETENCIES & TOOLS (Smart UI)
@@ -371,7 +390,6 @@ with col2:
     <div class="skill-box">
         <div class="skill-title">🛠️ Tools & Technologies</div>
         <div class="skill-item">Python</div>
-        <div class="skill-item">R</div>
         <div class="skill-item">SQL</div>
         <div class="skill-item">Power BI</div>
         <div class="skill-item">Excel</div>
@@ -396,35 +414,32 @@ st.header("🚀 Projects Portfolio")
 
 coding_projects = [
     {
-        "title": "Python Automation Script",
-        "desc": "Automated daily tasks using Python scripts, reducing manual work by 60%.",
-        "image": "assets/project1.png",
-        "demo": "#",
-        "github": "https://github.com/yourusername/python-automation"
+"title": "Pickaboo Scraper",
+    "desc": "Python-based web scraper that extracts product name, price, rating, and link from Pickaboo.com, handling pagination and lazy-loaded content.",
+    "demo": "https://youtu.be/CTQjbFZy17g",
+    "github": "https://github.com/arfinnaim02/pickaboo-scraper"
     },
     {
-        "title": "Web Scraper",
-        "desc": "Scraped and processed web data for business intelligence and reporting.",
-        "image": "assets/project2.png",
-        "demo": "#",
-        "github": "https://github.com/yourusername/web-scraper"
+    "title": "Data Analyst Portfolio",
+    "desc": "An interactive Streamlit-based portfolio showcasing data visualization, automation, and analytics projects using Python, Plotly, and Pandas.",
+    "demo": "https://arfin-portfolio.streamlit.app/",
+    "github": "https://github.com/arfinnaim02/arfin-portfolio"
+
     }
 ]
 
 data_science_projects = [
     {
         "title": "Data Analysis Dashboard",
-        "desc": "An interactive Streamlit dashboard for real-time sales and delivery insights.",
-        "image": "assets/project1.jpg",
-        "demo": "https://example.com",
-        "github": "https://github.com/yourusername/data-analysis-dashboard"
+        "desc": "An interactive Streamlit dashboard for real-time insights.",
+        "demo": "https://dataanalysis01.streamlit.app/",
+        "github": "https://github.com/arfinnaim02/Data-Analysis-Portal"
     },
     {
-        "title": "Customer Segmentation",
-        "desc": "ML-powered clustering for targeted marketing insights and customer profiling.",
-        "image": "assets/project4.png",
-        "demo": "#",
-        "github": "https://github.com/yourusername/customer-segmentation"
+        "title": "Interactive Sales Dashboard with Python & Streamlit",
+        "desc": "Turn raw sales data into real-time insights with a dynamic Python & Streamlit dashboard — visualize trends, track performance, and make data-driven decisions instantly!",
+        "demo": "https://salesanalysis01.streamlit.app/",
+        "github": "https://github.com/arfinnaim02/sales_analysis"
     }
 ]
 
@@ -437,7 +452,6 @@ with col1:
         <div class='project-card'>
             <h3>🚀 {proj['title']}</h3>
             <p>{proj['desc']}</p>
-            <img src="{proj['image']}" width="100%" style="border-radius:10px; margin: 15px 0;">
             <div style='margin: 15px 0;'>
                 <a class='button' href='{proj['demo']}' target='_blank'>🔗 Live Demo</a>
                 <a class='button' href='{proj['github']}' target='_blank'>🐙 View Code</a>
@@ -452,7 +466,6 @@ with col2:
         <div class='project-card'>
             <h3>🚀 {proj['title']}</h3>
             <p>{proj['desc']}</p>
-            <img src="{proj['image']}" width="100%" style="border-radius:10px; margin: 15px 0;">
             <div style='margin: 15px 0;'>
                 <a class='button' href='{proj['demo']}' target='_blank'>🔗 Live Demo</a>
                 <a class='button' href='{proj['github']}' target='_blank'>🐙 View Code</a>
