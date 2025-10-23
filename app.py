@@ -95,7 +95,7 @@ with col2:
     with col_edu:
         st.markdown("### 🎓 Education")
         st.markdown("""
-        - **Master of Science (MSc)** in Applied Statistics & Data Science, Jahangirnagar University — *Enrolled 2026*  
+        - **Master of Science (MSc)** in Applied Statistics & Data Science, Jahangirnagar University — *Enrolled 2025*  
         - **Bachelor of Science (BSc)** in Computer Communication Engineering, IIUC — *(2023)*  
         - **HSC** in Science, Bangladesh Naubahini College — *(2019)*  
         - **SSC** in Science, Government Muslim High School — *(2017)*
