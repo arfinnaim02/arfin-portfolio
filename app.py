@@ -110,12 +110,9 @@ with col2:
 - Product performance evaluation  
 
 **Data & Sales Team Lead – Sunnah Dress** | June 2024 – Nov 2024  
-- Led sales team & trend analysis  
+- Lead sales team & trend analysis  
 - Strategic reporting & insights  
 
-**Data & Inventory Assistant – Chocolate Craft** | July 2023 – Apr 2024  
-- Inventory management & sales tracking  
-- Process optimization  
 """)
 
 # -------------------
@@ -432,8 +429,8 @@ data_science_projects = [
     {
         "title": "Data Analysis Dashboard",
         "desc": "An interactive Streamlit dashboard for real-time insights.",
-        "demo": "https://dataanalysis01.streamlit.app/",
-        "github": "https://github.com/arfinnaim02/Data-Analysis-Portal"
+        "demo": "https://salesanalysis01.streamlit.app/",
+        "github": "https://github.com/arfinnaim02/auto_data_ju"
     },
     {
         "title": "Interactive Sales Dashboard with Python & Streamlit",
